@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maruti Solar Energy</title>
+
+  <!-- External Styles & Fonts -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Hamburger Menu (Top Right Corner) -->
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<!-- Side Menu (Slides from Right) -->
+<div class="side-menu" id="sideMenu">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="services.html"><i class="fas fa-cogs"></i> Services</a>
+  <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+
+  <!-- Header/Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Maruti Solar Energy">
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Discover the<br>Power of Solar</h1>
+        <a href="contact.html" class="btn-hero">Get a Free Inquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <p class="tagline">Harness the sun’s energy for a sustainable future</p>
+    <h2 style="color: #003366;">Welcome to Maruti Solar Energy</h2>
+    <p>Pioneering solar solutions for homes and businesses, Maruti Solar Energy is dedicated to empowering communities with clean energy.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-card">
+      <img src="images/efficient-solar-panels.png" alt="Efficient Panels" class="solar-icon"/>
+      <h3>Efficient Solar Panels</h3>
+      <p>Harnessing the sun’s abundant energy</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/seamless-installation.png" alt="Installation" class="seamless-icon" />
+      <h3>Seamless Installation</h3>
+      <p>Our team of expert technicians ensures a smooth process</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/savings.png" alt="Savings" class="savings-icon"/>
+      <h3>Unbeatable Savings</h3>
+      <p>Invest in solar power and start saving on your energy bills</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/trusted-expertise.png" alt="Expertise" class="expert-icon"/>
+      <h3>Trusted Expertise</h3>
+      <p>With years of industry experience</p>
+    </div>
+  </section>
+
+  
+<!-- technology-partners -->
+<section class="technology-partners">
+  <div class="tp-container">
+    <div class="tp-left">
+      <div class="stat">
+        <h2>25+<span> MW</span></h2>
+        <p>Maruti Solar Energy setup Solar Power Plants of 25+ MW.</p>
+      </div>
+      <br>
+      <div class="stat">
+        <h2>108+<span> Clients</span></h2>
+        <p>Trusted by 108+ industrial and commercial clients.</p>
+      </div>
+      <br>
+      <div class="stat">
+        <h2>17+<span> Experience</span></h2>
+        <p>17 Years of Industry Experience</p>
+      </div>
+    </div>
+    <br>
+   <div class="tp-right">
+      <h3 class="tp-title" style="color: #4caf50;">Technology Partners</h3>
+      <p class="tp-description">
+        Maruti Solar Energy collaborates with top technology partners to provide advanced solutions and expert guidance for solar energy systems.
+      </p>
+      <div class="tp-logo">
+        <img src="images/logo.png" alt="logo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- JavaScript for Side Menu -->
+  <script>
+  const menu = document.getElementById('sideMenu');
+  const hamburger = document.querySelector('.hamburger');
+
+  function toggleMenu() {
+    if (menu.style.right === '0px') {
+      menu.style.right = '-250px';
+    } else {
+      menu.style.right = '0px';
+    }
+  }
+
+  // Close on link click
+  document.querySelectorAll('.side-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.style.right = '-250px';
+    });
+  });
+
+  // Close if clicking outside the menu
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+      menu.style.right = '-250px';
+    }
+  });
+</script>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Form -->
+    <div class="contact-form">
+      <h2><span class="highlight-box">FEEL FREE</span> TO CONTACT US</h2>
+      <h3 class="get-started">Get Started!</h3>
+
+      <form class="grid-form">
+        <div class="form-row">
+          <div>
+            <label>Your Name</label>
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div>
+            <label>Email Address</label>
+            <input type="email" placeholder="Email Address" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Phone</label>
+            <input type="text" placeholder="Phone" required>
+          </div>
+          <div>
+            <label>Location</label>
+            <input type="text" placeholder="City/State" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Installation Type</label>
+            <select required>
+              <option disabled selected>Select Type</option>
+              <option>Industrial</option>
+              <option>Commercial</option>
+              <option>Residential</option>
+            </select>
+          </div>
+          <div>
+            <label>Installed Capacity</label>
+            <input type="text" placeholder="in kW/MW">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Solar Plant Area</label>
+            <input type="text" placeholder="in square feet or square meters">
+          </div>
+          <div>
+            <label>Type of Services Required</label>
+            <select>
+              <option>Installation</option>
+              <option>Consultation</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row single">
+          <label>Message</label>
+          <textarea placeholder="Type Your Message"></textarea>
+        </div>
+
+        <div class="form-row single">
+          <button type="submit">Send Message</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.404961008636!2d71.2005530740096!3d22.034099379878892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3958f7e22fff5383%3A0x2cba12d7af3718d6!2sMaruti%20Solar%20Energy!5e0!3m2!1sen!2sin!4v1751810654761!5m2!1sen!2sin" 
+        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" >
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Company Info -->
+    <div class="footer-box">
+      <h2>MARUTI <br><span>SOLAR ENERGY</span></h2>
+      <p>
+        Maximize Solar Efficiency with Jetsor O&M Services. Regular maintenance is crucial to ensure optimal performance, extend the lifespan of your solar power plant and meet financial and environmental goals.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-box">
+      <h3>Useful Links</h3>
+      <ul>
+        <li><i class="fas fa-angle-right"></i> Home</li>
+        <li><i class="fas fa-angle-right"></i> About Us</li>
+        <li><i class="fas fa-angle-right"></i> Why Maruti Solar?</li>
+      </ul>
+    </div>
+
+    <!-- Extra Links -->
+    <div class="footer-box">
+      <h3>Links</h3>
+      <ul>
+        <li><i class="fas fa-angle-right"></i> Case Studies</li>
+        <li><i class="fas fa-angle-right"></i> Contact Us</li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-box contact-box">
+      <h3>Contact Us</h3>
+      <ul class="contact-info">
+        <li><i class="fas fa-phone"></i> +91 84600 28998<br><span>Call Now</span></li>
+        <li><i class="fas fa-envelope"></i> marutisolarenergy1@gmail.com</li>
+        <li><i class="fas fa-map-marker-alt"></i> Shop No 39, Krishna Complex,<br>Atkot Road, Jasdan (360050),<br>Gujarat, India</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
